@@ -44,7 +44,7 @@
     </div>
     <!---->
     <div class="footer">
-      Copyright @ 2019 <b> {{ hotelInfo.hotelName }} </b><br>
+      Copyright @ 2021 <b> {{ hotelInfo.hotelName }} </b><br>
       地址：<b> {{ hotelInfo.address }} </b><br>
       电话号码： <b> {{ hotelInfo.telephone }} </b><br>
       电子邮箱：<b> {{ hotelInfo.email }} </b><br>
@@ -70,7 +70,9 @@
       indexImg3,
       hotelInfo: {
         hotelName: "ho",
-        address: ""
+        address: "",
+        telephone: '',
+        website: ''
       },
       list: [{
         image: colImg,
@@ -112,7 +114,7 @@
         this.$toast.error(err.toString())
       })
     },
-    
+
   }
 }
 </script>

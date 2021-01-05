@@ -72,15 +72,14 @@
         login() {
           userLogin(this.validateForm.username,this.validateForm.password).then(res => {
             var response = res;
-            if (response.data !== null){
+            if (response.data != null){
               Cookies.set('username',this.validateForm.username)
               Cookies.set('session',response.data.sessionId)
               Cookies.set('user_id',response.data.userId)
               this.navigateTo('/')
-            }else if (response.code !== 1000) {
-              this.$toast.error(response.message)
             }
           }).catch(err => {
+            this.$toast.error(response.message)
             console.log(err)
           })
         },

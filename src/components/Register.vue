@@ -112,11 +112,9 @@
         login() {
           // this.btnLoading = true
           userRegister(this.validateForm).then(res => {
-            if (res === 1){
-              this.$toast.success("注册成功")
+            if (res.code == 1000) {
+             this.$toast.success("注册成功")
               this.navigateTo('/login')
-            }else if (res === 0) {
-              this.$toast.message("请检查信息是否填写正确")
             }
           }).catch(err => {
             this.$toast.message("注册失败：" + err.toString())

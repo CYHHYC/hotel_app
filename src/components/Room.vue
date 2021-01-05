@@ -16,7 +16,6 @@
               <!--<mu-card-media>-->
                 <img src="../assets/imgs/room.jpg">
               </mu-card-media>
-              <!--<mu-card-title :title="rt.roomType" :sub-title="rt.remark"></mu-card-title>-->
               <mu-card-text>
                 <mu-list id="roomDetail">
                   <mu-list-item>

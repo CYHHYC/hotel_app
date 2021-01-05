@@ -39,8 +39,8 @@
       <mu-card v-show="listSize == 0" style="width: 100%; margin: 0 auto;border-radius: 5px" raised>
         <mu-card-title title="暂无订单" sub-title=""></mu-card-title>
         <mu-card-text>
-          <mu-button >回到首页</mu-button>
-          <mu-button >浏览客房</mu-button>
+          <mu-button @click="navigateTo('/')">回到首页</mu-button>
+          <mu-button @click="navigateTo('/room')">浏览客房</mu-button>
         </mu-card-text>
 
       </mu-card>

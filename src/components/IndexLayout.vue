@@ -42,19 +42,11 @@
     <!--</div>-->
     <mu-drawer :open.sync="open" :docked="docked" :z-depth="24" >
       <mu-list @click="open = !open">
-        <!--<mu-list-item>-->
-          <!--<mu-list-item-title></mu-list-item-title>-->
-          <!--<mu-list-item-action >-->
-            <!--<mu-button icon @click="open = false">-->
-              <!--<mu-icon value="close"></mu-icon>-->
-            <!--</mu-button>-->
-          <!--</mu-list-item-action>-->
-        <!--</mu-list-item>-->
         <mu-list-item button @click="navigateTo('/')">
           <mu-list-item-action>
             <mu-icon value="home"></mu-icon>
           </mu-list-item-action>
-          <mu-list-item-title>
+          <mu-list-item-title button @click="navigateTo('/')">
             回到首页
           </mu-list-item-title>
         </mu-list-item>
@@ -104,7 +96,7 @@
       },
       methods: {
           navigateTo(val){
-            this.$router.push(val)
+            this.$router.push(val);
           },
         logout(){
           Cookies.remove("username")
@@ -121,6 +113,9 @@
             this.$toast.error(err.toString())
           })
         },
+        turn() {
+            this.$router.push("/")
+        }
       }
     }
 </script>
